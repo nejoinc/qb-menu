@@ -1,0 +1,341 @@
+/* Nice font for button from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap");
+
+:root{
+    --color-primary: #BB0303;
+    --color-green: #d0ff73;
+    --color-red: #b92222;
+    --cubic: cubic-bezier(0,.52,.25,1);
+  }
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    user-select:none;
+    -webkit-font-smoothing: antialiased;
+
+}
+
+body{
+    background: transparent !important;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: max-content;
+    left: unset;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #171717e6;
+    border-radius: 10px;
+}
+
+#container {
+    position: relative;
+    height: auto;
+   
+    right: 2vh;
+    border-radius: 10px;
+    background: transparent !important;
+    transform:translateX(10vh);
+    opacity:0;
+    /* display:none; */
+    transition: 0.25s var(--cubic) all;
+    /* overflow:hidden; */
+}
+
+#container.show{
+        transform:translateX(0vh);
+        opacity:1;
+
+    /* overflow:hidden; */
+}
+
+
+.title {
+    width: auto;
+    /* background: rgba(23, 23, 23, 90%); */
+    color: white;
+    margin: auto;
+    position: relative;
+    /* margin-top: 0.5rem; */
+    overflow: hidden;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    font-family:"Bebas Neue";
+    padding: 0.5vh 0px 0px 0px;
+    margin: unset;
+    border-bottom: 5px solid black;
+    border-radius: 10px 10px 0 0;
+    background: linear-gradient(0deg, #d3d3d3, #ffffff 60%);
+    font-weight: bold;
+}
+
+.title .column{
+    font-size: 2vh;
+    padding: 0.7vh 1vh 0 1vh;
+    /* text-align: center; */
+    border-radius: 5px 5px 0 0;
+    box-shadow: rgb(0 0 0 / 48%) 0px 0px 10px;
+    background-color: black;
+    width:max-content !important;
+    margin-left:.5vh;
+}
+
+#buttons {
+    /* max-height: 75vh; */
+    width: 40vh;
+    /* overflow-x: none;
+    overflow-y: auto; */
+    background: linear-gradient(45deg, rgb(18 18 18 / 82%), rgb(34 34 34 / 85%));
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.527);
+    border-radius: 10px 10px 5px 5px;
+    /* border: 1px solid #ffffff26; */
+}
+
+.buttons-list{
+    max-height: 71vh;
+    overflow-y: auto;
+    padding: 0 1vh;
+    margin-bottom: 1vh;
+}
+
+ 
+/* New code starts here */
+::-webkit-scrollbar {
+    width: 0.5vh;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffffff;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+/* New code ends here */
+
+
+
+
+.button {
+    width: auto;
+    height: 10%;
+    color: black;
+    position: relative;
+    overflow: hidden;
+    padding: 0.9vh 0vh;
+    display: flex;
+    flex-direction: column;
+    cursor: none;
+    margin: 1vh 0vh;
+    font-family:"Bebas Neue";
+    cursor: pointer;
+    display: flex;
+    flex-direction: row !important;
+    gap: 10px;
+
+    background-color: #ffffffbb;
+    border-radius: 5px;
+    border: 1px solid white;
+    transition: 0.25s var(--cubic) all;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0);
+
+}
+
+/* .button:last-child{
+    margin-bottom:0;
+} */
+
+.button .header{
+    color:black !important;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: left;
+}
+
+.button.selected {
+    background-color: white;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.493);
+    transform:scale(1.015);
+}
+
+
+.title > div.column > div.header {
+    font-size: 2.3vh;
+    line-height: 2.3vh;
+}
+
+.disabled {
+    background: rgba(102, 102, 102, 0.9) !important;
+    cursor: default;
+}
+
+div > .text {
+    flex-direction: column;
+    font-size: 1.3vh;
+    overflow: hidden;
+    font-weight: 600;
+    color: #000000bd;
+    
+}
+
+div > .header {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: left;
+    overflow: wrap;
+    color: white;
+    font-size: 1.8vh;
+    line-height: 1.3vh;
+    overflow: visible;
+
+    font-family:"Bebas Neue";
+}
+
+.footer{
+    /* width:100%; */
+    width:max-content;
+    /* margin-top:1vh; */
+    /* background-color:rgba(0, 0, 0, 0.829); */
+    border-radius:10px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+    text-transform:uppercase;
+    font-size:1.3vh;
+    font-family:"Bebas Neue";
+    position:absolute;
+    top: -3.5vh;
+    right: 0;
+    transform:translateY(2vh);
+    opacity:0;
+    transition: .5s var(--cubic) all;
+    transition-delay:0s;
+    /* border:1px solid rgba(255, 255, 255, 0.13); */
+    /* box-shadow:0 0 20px rgba(0, 0, 0, 0.719); */
+}
+
+#container.show .footer{
+    transform:translateY(0vh);
+    opacity:0.9;
+    transition: .5s var(--cubic) all;
+    transition-delay:.1s;
+
+}
+
+.footer-bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.76);
+    z-index: -1;
+    filter: blur(5px);
+    border-radius: 5px;
+    top:0;
+    left:0;
+}
+
+.footer .control{
+    display:flex;
+    align-items: center;
+    padding:0vh .5vh;
+    position:relative;
+    margin-left: 1vh;
+    height: 2.6vh;
+    width: max-content;
+    opacity:0.8;
+
+}
+
+.footer .accion{
+    font-family:"Quicksand";
+    /* line-height:1.3vh; */
+    font-weight:300;
+
+
+}
+
+.footer svg, .footer img{
+    height:2vh;
+    margin-right:.5vh;
+}
+
+.button .icon{
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: left;
+    /* margin-left: 0.7vh; */
+    font-size: 2.5vh;
+    
+}
+
+.button.selected .icon i{
+    margin-right:.5vh;
+}
+
+.button .icon i{
+    margin-left: 0.7vh;
+    color: var(--color-primary);
+    transition: 0.5s var(--cubic) all;
+    width: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.circle-1, .circle-2 {
+    animation: scroll 2s infinite linear;
+    opacity:0;
+  }
+  
+  .circle-2{
+    animation-delay: 1s;
+  }
+  
+  @keyframes scroll {
+    0% {
+      cy: 4;
+      opacity: 0;
+    }
+    45%, 55% {
+      opacity: 1;
+      cy: 9;
+    }
+    100% {
+      cy: 14;
+      opacity: 0;
+    }
+  }
+  
