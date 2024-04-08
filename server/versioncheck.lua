@@ -14,7 +14,7 @@ PerformHttpRequest('https://raw.githubusercontent.com/nejoinc/Versiones_Scripts/
             print('^1')
             print('^1[qb-menu] ^3CHANGELOG ^5' .. NuevaVersion .. ':')
             print(Cambios)
-            print('^1[qb-menu]^0 You ^8are not^0 running the newest stable version of ^5qb-menu^0. Please update: ')
+            print('^1[qb-menu]^0 You ^8are not^0 running the newest stable version of ^5qb-menu^0. Please update: https://github.com/nejoinc/qb-menu ')
         else
             print('^1[qb-menu]^0 Your script is ^2up to update^0')
         end
